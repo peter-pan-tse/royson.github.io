@@ -1,0 +1,222 @@
+/* CSS Document */
+/* Setting fade transition and default settings */
+html {
+	margin:0;
+	padding:0;
+	scroll-behavior: smooth;
+}
+body {
+	color: #ffffff;
+	background-color: #022C44;
+	transition: background-color 1.25s ease;
+	font-family: sans-serif;
+	overflow-x: hidden;
+	font-size: 110%;
+	line-height: 1.5;
+	padding:0px 0 0 0;
+	margin:0;
+}
+h1, h2 {
+	font-size: 4em;
+	letter-spacing: -0.025em;
+	line-height: 1.1;
+}
+@media only screen and (max-width: 540px) {
+	h1, h2 {
+		font-size: 3em;
+	}
+}
+a {
+	color: #00AAA8;
+}
+.bg-pattern {
+	display:flex;
+	position:fixed;
+	width:100vw;
+	height:100vh;
+	top:0px;
+	background-image: url("../img/bg-pattern.png");
+	background-size:auto 100vh;
+	background-position: left top;
+	background-repeat:no-repeat;
+	z-index: -1;
+}
+/* panel styles */
+.panel {
+	/* min height incase content is higher than window height */
+	display:flex;
+	flex-direction: column;
+	padding:80px 10% 40px 10%;
+	width:80%;
+	min-height:calc(100vh - 80px);
+	/* outline: 10px solid hotpink; */
+	/* turn above on to see the edge of panels */
+}
+@media only screen and (max-width: 920px) {
+	.panel {
+		padding:60px 5% 40px 5%;
+		width:90%;
+	}
+}
+/* colours */
+.color-about {
+	background-color: #004270;
+}
+.color-services {
+	background-color: #466979;
+}
+.color-clients {
+	background-color: #00AAA8;
+}
+.color-team {
+	background-color: #F89C27;
+}
+.color-contact {
+	background-color: #222222;
+}
+
+/* content styles */
+.header {
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:10px 20px;
+	position:fixed;
+	top:0;
+	width:calc(100% - 40px);
+    background: linear-gradient(45deg, rgba(0,0,0,1) 0px,  rgba(0,0,0,1) 170px, rgba(4,127,146,0.75) 170px, rgba(4,127,146,1) 75%);
+	z-index: 100;
+}
+.header > img {
+	width:150px;
+	height:auto;
+}
+.theme-box {
+	background-image: url("../img/theme-photo.jpg");
+	background-position: top right;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.theme-box h1 {
+	font-size: 5em;
+	margin:50vh 0 0 0;
+}
+.theme-box h2 {
+	font-size: 3em;
+	margin:10px 0 0 0;
+}
+@media only screen and (max-width: 540px) {
+	.theme-box h1 {
+		font-size: 4em;
+		margin:50vh 0 0 0;
+	}
+	.theme-box h2 {
+		font-size: 2.5em;
+		margin:10px 0 0 0;
+	}
+}
+.service-box, .client-box {
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+.service-item {
+	display:flex;
+	flex-direction:column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding:20px;
+	margin:1.5%;
+	width:calc(30% - 40px);
+}
+@media only screen and (max-width: 540px) {
+	.service-item {
+		margin:1.5% 0;
+		width:calc(100% - 40px);
+	}
+}
+.service-item img {
+	height:100px;
+	width:auto;
+}
+.service-item p {
+	text-align: left;
+	margin:10px 0 0 0;
+}
+.client-item {
+	display:flex;
+	flex-direction:column;
+	justify-content: flex-start;
+	align-items: center;
+	padding:20px;
+	margin:1.5%;
+	width:calc(22% - 40px);
+	text-align: center;
+}
+@media only screen and (max-width: 540px) {
+	.client-item {
+		margin:1.5% 0;
+		width:calc(100% - 40px);
+	}
+}
+.client-item span {
+	font-size:4em;
+}
+.client-item p {
+	text-align: left;
+	margin:10px 0 0 0;
+}
+.team-name {
+	font-size: 130%;
+	letter-spacing: -0.025em;
+	line-height: 1.1;
+}
+.contact-item {
+	display:flex;
+	flex-direction:column;
+	justify-content: flex-start;
+	padding:20px;
+	margin:1.5%;
+	width:calc(22% - 40px);
+}
+@media only screen and (max-width: 540px) {
+	.contact-item {
+		margin:1.5% 0;
+		width:calc(100% - 40px);
+	}
+}
+.contact-item span {
+	font-size:3em;
+}
+.contact-item p {
+	text-align: left;
+	font-size:90%;
+	margin:10px 0 0 0;
+}
+.social-box {
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	margin:20px 0 0 0;
+}
+a.social-item {
+	margin:10px;
+	font-size:2em;
+	text-decoration: none;
+}
+ul.desc-point {
+	padding:20px 0 0 20px;
+	font-size: 90%;
+}
+ul.desc-point li {
+	list-style-image: url("../img/bullet-white.png");
+	margin:0 0 10px 0;
+}
+p.footer {
+	font-size:80%;
+	color:#999999;
+	margin:0;
+	text-align: center;
+}

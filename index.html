@@ -1,101 +1,197 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Royson Valuation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<title>Royson Valuation</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="font.css" rel="stylesheet" type="text/css">
+<link href="css/burger-menu.css" rel="stylesheet" type="text/css">
 </head>
-<style>
-	/* Setting fade transition and default settings */
-	body {
-	  color: #000;
-	  background-color: #f4f4f4;
-	  transition: background-color 1s ease;
-	}
 
-	/* panel styles */
-	.panel {
-	  /* min height incase content is higher than window height */
-	  min-height: 100vh;
-	  display: flex;
-	  justify-content: space-around;
-	  align-items: center;
-	  font-family: sans-serif;
-	  /* outline: 10px solid hotpink; */
-	  /* turn above on to see the edge of panels */
-	}
-
-	/* colours */
-	.color-violet {
-	  background-color: #7a4eab;
-	}
-	.color-indigo {
-	  background-color: #4332cf;
-	}
-	.color-blue {
-	  background-color: #2f8fed;
-	}
-	.color-green {
-	  background-color: #4dcf42;
-	}
-	.color-yellow {
-	  background-color: #faeb33;
-	}
-	.color-orange {
-	  background-color: #f19031;
-	}
-	.color-red {
-	  background-color: #f2293a;
-	}
-
-	/* styling for demo, can ignore */
-	body {
-	  text-align: center;
-	  font-size: 120%;
-	  line-height: 1.618;
-	}
-	h1,
-	h2 {
-	  font-size: 3em;
-	  letter-spacing: -0.05em;
-	  line-height: 1.1;
-	}
-	p {
-	  max-width: 30em;
-	  margin-bottom: 1.618em;
-	}
-	a {
-	  color: #4332cf;
-	}
-</style>
 <body>
-	<div class="panel" data-color="white">
+	<div class="header">
+		<img src="img/logo.png" />
+		<!-- mobile menu -->
+		<button id="hamburger-menu" data-toggle="ham-navigation" class="hamburger-menu-button"><span class="hamburger-menu-button-open">Menu</span></button>
+		<nav id="ham-navigation" class="ham-menu">
+			<ul class="menu">
+				<li><a href="#top">Top</a></li>
+				<li><a href="#about">About Us</a></li>
+				<li><a href="#services">Our Services</a></li>
+				<li><a href="#clients">Our Clients</a></li>
+				<li><a href="#team">Out Team</a></li>
+				<li><a href="#contact">Contact Us</a></li>
+			</ul>
+		</nav>
+		<!-- mobile menu ended -->
+	</div>
+	<div class="bg-pattern"></div>
+	<div id="top" class="panel theme-box" data-color="white">
 		<div>
-		  <h1>Magic scrolling colours</h1>
-		  <p>Scroll to animate the background colour of the body as a full height panel becomes visible.</p>
-		  <p>I have tried to comment the code, particurly the JavaScript, as much as possible. I hope it's clear to understand.</p>
-		  <p>If you have any questions my twitter is <a href="https://twitter.com/daveredfern">@daveredfern</a>.</p>
+		  <h1>Royson Valuation</h1>
+		  <h2>We see the true values of your possessions</h2>
 	  </div>
 	</div>
-	<div class="panel" data-color="violet">
-	  <h2>Violet panel</h2>
+	<div id="about" class="panel" data-color="about">
+		<h2>About Us</h2>
+		<h3>"Navigating the world of valuation requires a trusted partner"</h3>
+		<p>We are a team of experienced professionals that truly understand your valuation needs. Our diverse background places us from the perspectives of listed companies, private enterprises, investment companies and up-and-coming ventures.</p>
+		<p>We aim to provide you holistic valuation advisory and business consultancy services, enabling your business to thrive and realise your strategic objectives. Our services can be applied to M&amp;A, financial reporting, investment and business expansion and planning purposes.</p>
 	</div>
-	<div class="panel" data-color="indigo">
-	  <h2>Indigo panel</h2>
+	<div id="services" class="panel" data-color="services">
+	 	<h2>Our Services</h2>
+		<h3>“We offer solutions according to your needs”</h3>
+		<p>ROYSON provides valuation services that facilitate corporate decision-making process and financial management, as well as intangible assets and financial derivatives valuation that shapes your business landscape.</p>
+		<p>We offer tailored advice on decisions such as financing major projects, making mergers and acquisitions, public listing, strategic joint-ventures. We also provide services for your accounting use.</p>
+		<div class="service-box">
+			<div class="service-item">
+				<img src="img/ico-biz.png" />
+				<h3>Business Valuation</h3>
+				<p>We conduct market and industry research across different business sectors and geographic areas. Our database and technical modelling enable us to make quantitative and qualitative analysis of your business.</p>
+			</div>
+			<div class="service-item">
+				<img src="img/ico-ip.png" />
+				<h3>Intangible Assets</h3>
+				<p>We value intellectual properties include but not limited to trademarks, patents, copyrights, know-how, license agreements, assembled workforce, customer relationship and distribution networks via disciplined valuation methodologies.</p>
+			</div>
+			<div class="service-item">
+				<img src="img/ico-coins.png" />
+				<h3>Financial Derivatives</h3>
+				<p>We value various sophisticated financial instruments such as share options and warrants, convertible bonds and preference shares, financial guarantees, Swap via appropriate financial modelling.</p>
+			</div>
+			<!--<div class="service-item">
+				<img src="img/ico-art.png" />
+				<h3>Purchase Price Allocation</h3>
+				<p>We appraise the fair values of the acquiree’s identifiable assets and profit guarantee in acquisition to fulfil regulatory and accounting requirements.</p>
+			</div>-->
+			<div class="service-item">
+				<img src="img/ico-house.png" />
+				<h3>Property valuation</h3>
+				<p>We appraise your properties such as land, offices, carparks, industrial plants as well as residential apartments and houses to maximize your property portfolio and structure your strategy.</p>
+			</div>
+			<div class="service-item">
+				<img src="img/ico-plant.png" />
+				<h3>Plant and Machinery</h3>
+				<p>We value different plant and machinery across different manufacturing industries, especially in China, such as telecommunication and production facilities, etc.</p>
+			</div>
+		</div>
 	</div>
-	<div class="panel" data-color="blue">
-	  <h2>Blue panel</h2>
+	<div id="clients" class="panel" data-color="clients">
+		<h2>Our Clients</h2>
+		<h3>“We have a track record of success in providing quality-assured services. We cover a variety”</h3>
+		<div class="client-box">
+			<div class="client-item">
+				<span class="ht-ipo"></span>
+				<h4>IPO</h4>
+			</div>
+			<div class="client-item">
+				<span class="ht-trade"></span>
+				<h4>Transactions</h4>
+			</div>
+			<div class="client-item">
+				<span class="ht-spca"></span>
+				<h4>SPCA</h4>
+			</div>
+			<div class="client-item">
+				<span class="ht-bolt"></span>
+				<h4>Construction</h4>
+			</div>
+			<div class="client-item">
+				<span class="ht-school"></span>
+				<h4>Education</h4>
+			</div>
+			<div class="client-item">
+				<span class="ht-pc"></span>
+				<h4>Electronics and Electrical Equipment</h4>
+			</div>
+			<div class="client-item">
+				<span class="ht-medic"></span>
+				<h4>Health Care</h4>
+			</div>
+			<div class="client-item">
+				<span class="ht-media"></span>
+				<h4>Media</h4>
+			</div>
+			<div class="client-item">
+				<span class="ht-coins"></span>
+				<h4>Financial Services / Assets Management</h4>
+			</div>
+			<div class="client-item">
+				<span class="ht-chip"></span>
+				<h4>Information Technology</h4>
+			</div>
+			<div class="client-item">
+				<span class="ht-cart"></span>
+				<h4>Consumables / E-commerce</h4>
+			</div>
+		</div>
 	</div>
-	<div class="panel" data-color="green">
-	  <h2>Green panel</h2>
+	<div id="team" class="panel" data-color="team">
+		<h2>Our Team</h2>
+		<div class="service-box">
+			<div class="service-item">
+				<div class="team-name"><strong>Ms. Amy Chan</strong>, CPA</div>
+				<div><i>Director, Business Valuation</i></div>
+				<ul class="desc-point">
+					<li>Has over 5 years of experience in accounting and auditing and more than 12 years of experience in business valuation and derivatives valuation</li>
+					<li>Actively participated in over 1,200 assignments regarding business valuation, derivatives valuation, intangible assets valuation, purchase price allocation and numerous mega size M&amp;A deals and IPO cases in Hong Kong for multinational corporations and Chinese state-owned enterprises</li>
+					<li>Is experienced in handling valuations for transactions / IPO related</li>
+				</ul>
+			</div>
+			<div class="service-item">
+				<div class="team-name"><strong>Mr. Jasper Chan</strong>, CFA, CPA</div>
+				<div><i>Director, Business Valuation</i></div>
+				<ul class="desc-point">
+					<li>Has over 15 years of experience in auditing, finance and valuation experience for both HK, China and overseas private and public companies</li>
+					<li>Proficient in business valuation, listed company related assignments and capital market transactions. Past experiences include serving public and private companies and investment companies</li>
+					<li>Is experienced in handling valuations for transactions / investment related</li>
+				</ul>
+			</div>
+			<div class="service-item">
+				<div class="team-name"><strong>Mr. Lawrence Chan</strong>, MRICS MHKIS RPS(GP) MHIREA MCIREA, RICS Registered Valuer</div>
+				<div><i>Director, Property Valuation</i></div>
+				<ul class="desc-point">
+					<li>Is a member of the Royal Institution of Chartered Surveyors, a member of the Hong Kong institute of Surveyors, Registered Professional Surveyors in the General Practice Section and a member of China Institute of Real Estate and Agents</li>
+					<li>Has over 18 years experience in the valuation of properties in Hong Kong, Macau, China and the Asia Pacific Region</li>
+				</ul>
+			</div>
+		</div>
 	</div>
-	<div class="panel" data-color="yellow">
-	  <h2>Yellow panel</h2>
-	</div>
-	<div class="panel" data-color="orange">
-	  <h2>Orange panel</h2>
-	</div>
-	<div class="panel" data-color="red">
-	  <h2>Red panel</h2>
+	<div id="contact" class="panel" data-color="contact">
+		<h2>Contact Us</h2>
+		<div class="client-box">
+			<div class="contact-item">
+				<span class="ht-person"></span>
+				<h3>Amy Chan, Director</h3>
+				<p><strong>D:</strong> +852 3583 1403<br><strong>M:</strong> +852 6071 8968<br><strong>E:</strong> <a href="mailto:amy.chan@roysonva.com">amy.chan@roysonva.com</a></p>
+			</div>
+			<div class="contact-item">
+				<span class="ht-map"></span>
+				<h3>Our office</h3>
+				<p>Unit 1503, 15/F., The L. Plaza, 367-375 Queen’s Road Central, Hong Kong</p>
+			</div>
+			<div class="contact-item">
+				<span class="ht-phone"></span>
+				<h3>Telephone</h3>
+				<p>+852 3583 1405</p>
+			</div>
+			<div class="contact-item">
+				<span class="ht-email"></span>
+				<h3>Email</h3>
+				<p><a href="mailto:valuation@roysonva.com">valuation@roysonva.com</a></p>
+			</div>
+		</div>
+		<div class="social-box">
+			<a class="social-item" href="#" target="_parent"><span class="ht-logo-fb"></span></a>
+			<a class="social-item" href="#" target="_parent"><span class="ht-logo-x"></span></a>
+			<a class="social-item" href="#" target="_parent"><span class="ht-logo-ig"></span></a>
+			<a class="social-item" href="#" target="_parent"><span class="ht-logo-in"></span></a>
+			<a class="social-item" href="#" target="_parent"><span class="ht-logo-dscd"></span></a>
+			<a class="social-item" href="#" target="_parent"><span class="ht-logo-yt"></span></a>
+		</div>
+		<p class="footer">&copy; Copyright <span id="thisyear"></span> Royson Valuation Advisory Limited. All Rights Reserved</p>
 	</div>
 </body>
 <script>
@@ -107,7 +203,7 @@
 		  $panel = $(".panel");
 
 		// Change 33% earlier than scroll position so colour is there when you arrive.
-		var scroll = $window.scrollTop() + $window.height() / 3;
+		var scroll = $window.scrollTop() + $window.height() / 2;
 
 		$panel.each(function () {
 		  var $this = $(this);
@@ -130,5 +226,32 @@
 		});
 	  })
 	  .scroll();
+</script>
+<script>
+	var button = document.getElementById("hamburger-menu"),
+	  span = button.getElementsByTagName("span")[0];
+
+	button.onclick = function () {
+	  span.classList.toggle("hamburger-menu-button-close");
+	};
+
+	$("#hamburger-menu").on("click", toggleOnClass);
+
+	function toggleOnClass(event) {
+	  var toggleElementId = "#" + $(this).data("toggle"),
+		element = $(toggleElementId);
+
+	  element.toggleClass("on");
+	}
+
+	// close hamburger menu after click a
+	$(".menu li a").on("click", function () {
+	  $("#hamburger-menu").click();
+	});
+</script>
+<script>
+	const d = new Date();
+	let year = d.getFullYear();
+	document.getElementById("thisyear").innerHTML = year;
 </script>
 </html>

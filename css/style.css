@@ -11,23 +11,32 @@ body {
 	transition: background-color 1.25s ease;
 	font-family: sans-serif;
 	overflow-x: hidden;
-	font-size: 110%;
+	font-size: 1.5em;
 	line-height: 1.5;
 	padding:0px 0 0 0;
 	margin:0;
 }
 h1, h2 {
-	font-size: 4em;
+	font-size: 3em;
 	letter-spacing: -0.025em;
-	line-height: 1.1;
+	line-height: 1.25;
+}
+h3 {
+	font-size: 1.5em;
+	letter-spacing: -0.025em;
+	line-height: 1.25;
 }
 @media only screen and (max-width: 540px) {
 	h1, h2 {
-		font-size: 3em;
+		font-size: 2.5em;
 	}
 }
 a {
 	color: #00AAA8;
+	transition: all ease 0.3s;
+}
+a:hover {
+	color: #FFC937;
 }
 .bg-pattern {
 	display:flex;
@@ -46,16 +55,16 @@ a {
 	/* min height incase content is higher than window height */
 	display:flex;
 	flex-direction: column;
-	padding:80px 10% 40px 10%;
-	width:80%;
+	padding:60px 5% 40px 5%;
+	width:90%;
 	min-height:calc(100vh - 80px);
 	/* outline: 10px solid hotpink; */
 	/* turn above on to see the edge of panels */
 }
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 540px) {
 	.panel {
-		padding:60px 5% 40px 5%;
-		width:90%;
+		padding:60px 10px 40px 10px;
+		width:calc(100vw - 20px);
 	}
 }
 /* colours */
@@ -98,24 +107,49 @@ a {
 	background-repeat: no-repeat;
 }
 .theme-box h1 {
-	font-size: 5em;
+	font-size: 4em;
 	margin:50vh 0 0 0;
 }
 .theme-box h2 {
-	font-size: 3em;
+	font-size: 2.5em;
 	margin:10px 0 0 0;
 }
 @media only screen and (max-width: 540px) {
 	.theme-box h1 {
-		font-size: 4em;
+		font-size: 3em;
 		margin:50vh 0 0 0;
 	}
 	.theme-box h2 {
-		font-size: 2.5em;
+		font-size: 2em;
 		margin:10px 0 0 0;
 	}
 }
-.service-box, .client-box {
+.about-item {
+	display:flex;
+	flex-direction:column;
+	justify-content: flex-start;
+	align-items: center;
+	padding:20px 20px 40px 20px;
+	margin:1.5%;
+	width:calc(30% - 40px);
+	text-align: center;
+}
+.about-item h2 {
+	font-size: 3.5em;
+	margin:0;
+	color:#FFC937;
+}
+.about-item h3 {
+	margin:0;
+	color:#FFC937;
+}
+@media only screen and (max-width: 540px) {
+	.about-item {
+		margin:1.5% 0;
+		width:calc(100% - 40px);
+	}
+}
+.service-box {
 	display:flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
@@ -125,10 +159,11 @@ a {
 	display:flex;
 	flex-direction:column;
 	justify-content: flex-start;
-	align-items: flex-start;
+	align-items: center;
 	padding:20px;
 	margin:1.5%;
 	width:calc(30% - 40px);
+	text-align: center;
 }
 @media only screen and (max-width: 540px) {
 	.service-item {
@@ -144,31 +179,61 @@ a {
 	text-align: left;
 	margin:10px 0 0 0;
 }
-.client-item {
+.client-box {
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:center;
+	align-items: stretch;
+}
+.client-item, .client-item-l {
 	display:flex;
 	flex-direction:column;
 	justify-content: flex-start;
-	align-items: center;
+	align-items:center;
 	padding:20px;
 	margin:1.5%;
-	width:calc(22% - 40px);
 	text-align: center;
 }
+.client-item {
+	width:calc(22% - 40px);
+	color:#9CFFEB;
+}
+.client-item-l {
+	width:calc(30% - 40px);
+}
 @media only screen and (max-width: 540px) {
-	.client-item {
+	.client-item, .client-item-l {
 		margin:1.5% 0;
 		width:calc(100% - 40px);
 	}
 }
 .client-item span {
+	font-size:3em;
+}
+.client-item-l span {
 	font-size:4em;
 }
-.client-item p {
-	text-align: left;
+.client-item p, .client-item-l p {
+	text-align: center;
 	margin:10px 0 0 0;
 }
+.team-item {
+	display:flex;
+	flex-direction:column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding:20px;
+	margin:1.5%;
+	width:calc(30% - 40px);
+}
+@media only screen and (max-width: 540px) {
+	.team-item {
+		margin:1.5% 0;
+		width:calc(100% - 40px);
+	}
+}
 .team-name {
-	font-size: 130%;
+	font-size: 1.5em;
 	letter-spacing: -0.025em;
 	line-height: 1.1;
 }
@@ -178,7 +243,7 @@ a {
 	justify-content: flex-start;
 	padding:20px;
 	margin:1.5%;
-	width:calc(22% - 40px);
+	width:calc(30% - 40px);
 }
 @media only screen and (max-width: 540px) {
 	.contact-item {
@@ -189,7 +254,7 @@ a {
 .contact-item span {
 	font-size:3em;
 }
-.contact-item p {
+.contact-item p {	
 	text-align: left;
 	font-size:90%;
 	margin:10px 0 0 0;
@@ -207,7 +272,7 @@ a.social-item {
 	text-decoration: none;
 }
 ul.desc-point {
-	padding:20px 0 0 20px;
+	padding:30px 0 0 20px;
 	font-size: 90%;
 }
 ul.desc-point li {
@@ -217,6 +282,6 @@ ul.desc-point li {
 p.footer {
 	font-size:80%;
 	color:#999999;
-	margin:0;
+	margin:40px 0 0 0;
 	text-align: center;
 }

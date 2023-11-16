@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'ht-font';
-  src:  url('fonts/ht-font.eot?l7bo44');
-  src:  url('fonts/ht-font.eot?l7bo44#iefix') format('embedded-opentype'),
-    url('fonts/ht-font.ttf?l7bo44') format('truetype'),
-    url('fonts/ht-font.woff?l7bo44') format('woff'),
-    url('fonts/ht-font.svg?l7bo44#ht-font') format('svg');
+  src:  url('fonts/ht-font.eot?lncdob');
+  src:  url('fonts/ht-font.eot?lncdob#iefix') format('embedded-opentype'),
+    url('fonts/ht-font.ttf?lncdob') format('truetype'),
+    url('fonts/ht-font.woff?lncdob') format('woff'),
+    url('fonts/ht-font.svg?lncdob#ht-font') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,39 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ht-piggy:before {
+  content: "\e912";
+}
+.ht-report:before {
+  content: "\e913";
+}
+.ht-spac:before {
+  content: "\e914";
+}
+.ht-container:before {
+  content: "\e90a";
+}
+.ht-evcar:before {
+  content: "\e90b";
+}
+.ht-crops:before {
+  content: "\e90c";
+}
+.ht-material:before {
+  content: "\e90d";
+}
+.ht-recycle:before {
+  content: "\e90e";
+}
+.ht-oil:before {
+  content: "\e90f";
+}
+.ht-rack:before {
+  content: "\e910";
+}
+.ht-diamond:before {
+  content: "\e911";
+}
 .ht-person:before {
   content: "\e909";
 }
@@ -81,9 +114,6 @@
 }
 .ht-trade:before {
   content: "\e992";
-}
-.ht-spca:before {
-  content: "\e993";
 }
 .ht-ipo:before {
   content: "\e994";

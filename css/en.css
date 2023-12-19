@@ -1,0 +1,14 @@
+/* CSS Document */
+/* Setting fade transition and default settings */
+body {
+	font-family:"Open Sans", san-serif;
+	font-size: 1.25em;
+	line-height: 1.5;
+}
+@media only screen and (max-width: 540px) {
+	body {
+		font-family:"Open Sans", san-serif;
+		font-size: 1em;
+		line-height: 1.5;
+	}
+}

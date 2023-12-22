@@ -84,10 +84,10 @@ a:hover {
 	background-color: #001F30;
 }
 .color-clients {
-	background-color: #00AAA8;
+	background-color: #1c8383;
 }
 .color-team {
-	background-color: #F89C27;
+	background-color: #c77a18;
 }
 .color-contact {
 	background-color: #222222;
@@ -440,4 +440,10 @@ p.footer {
 	color:#999999;
 	margin:60px 0 0 0;
 	text-align: center;
+}
+.ht-ipo, .ht-trade, .ht-report, .ht-piggy, .ht-spac {
+	text-shadow: 2px 2px 5px #000000;
+}
+.ht-container, .ht-evcar, .ht-recycle, .ht-material, .ht-medic, .ht-diamond, .ht-rack, .ht-cart, .ht-school, .ht-coins, .ht-pc, .ht-bolt, .ht-media, .ht-chip, .ht-oil, .ht-crops {
+	text-shadow: 2px 2px 5px #000000;
 }
